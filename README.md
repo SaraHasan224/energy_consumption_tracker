@@ -1,70 +1,137 @@
-# Getting Started with Create React App
+# Energy Consumption and Temperature Visualization
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project visualizes energy consumption and temperature data using a line graph and a bar chart. It is built with React, Redux, and Chart.js, providing an interactive and responsive user experience.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- Visualizes energy consumption (kWh) as a bar chart.
+- Displays temperature (°C) as a line graph on the same chart.
+- Responsive design with an interactive user interface.
 
-### `npm start`
+## Technologies Used
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **React**: JavaScript library for building user interfaces.
+- **Redux**: State management across the application.
+- **React Router**: Routing in a single-page application.
+- **Chart.js** & **react-chartjs-2**: Rendering dynamic charts.
+- **Axios**: Making HTTP requests (for future enhancements).
+- **@testing-library/react**: Testing React components.
+- **Sass**: Styling the application with SCSS.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Installation
 
-### `npm test`
+### Step 1: Clone the Repository
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+git clone https://your-repo-url.git
+cd my-energy-visualization
+```
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Step 2: Install Dependencies
+```bash
+npm install
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Step 3: Start the Application
+```bash
+npm start
+```
+Open your browser and navigate to http://localhost:3000 to view the application.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Package Usage
+Core Packages
+- **React & React-DOM**: Core libraries for building the user interface.
+  
+**Redux**:
+- **react-redux**: Connects components to the Redux store.
+- **redux-persist**: Persists the Redux state across sessions.
+- **redux-thunk**: Middleware for handling asynchronous actions.
+- **redux-logger**: Logs Redux state changes in the console.
+  
+**React Router**
+- **react-router-dom**: Provides routing functionalities for navigation.
+  
+**Charting Libraries**
+- **chart.js**: Renders various types of charts.
+- **react-chartjs-2**: Integrates Chart.js with React.
+  
+**HTTP and Data Handling**
+- **axios**: For making HTTP requests.
+  
+**Testing Libraries**
+- **@testing-library/react**: Utility for testing React components.
+- **@testing-library/jest-dom**: Custom Jest matchers for DOM nodes.
 
-### `npm run eject`
+**Styling**
+- **Sass**: A preprocessor for writing CSS with features like variables and nesting.
+  
+**Offline Detection**
+- **react-detect-offline**: Detects online/offline status and handles connectivity changes.
+  
+## Directory Structure
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+This organized structure promotes clarity and maintainability in the project. Each directory serves a specific function, making it easier for developers to navigate and understand the codebase. By following this structure, you can enhance collaboration and streamline the development process
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+energy_usage/
+- public/               # Public assets and HTML 
+- src/                  # Source code for the application
+  - components/         # Reusable components
+  - containers/         # Container components (like pages)
+  - hooks/              # Custom hooks
+  - assets/             # Static assets (images, data)
+  - store/              # Redux store configuration
+  - routes/             # Route configuration
+  - utils/              # Custom utilities files
+  - App.js              # Main application component
+  - index.js            # Entry point of the application
+- README.md             # Project documentation
+- package.json          # Project dependencies and scripts
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Description of Key Directories
 
-## Learn More
+- **public/**: 
+  - Contains the `index.html` file that serves as the main entry point for the web application.
+  - You can place any static assets (like images or icons) that do not require processing by Webpack.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- **src/**: 
+  - The primary directory where all application code resides.
+  
+  - **assets/**: 
+    - Includes static assets such as images and JSON files. This is where you can store any data files required for the app.
+  
+  - **components/**: 
+    - Contains reusable React components that can be used throughout the application. Examples include buttons, modals, and other UI elements.
+  
+  - **containers/**: 
+    - Houses higher-level components that typically represent entire pages or sections of the app. They often manage state and logic.
+  
+  - **hooks/**: 
+    - Contains custom React hooks that encapsulate reusable logic, promoting cleaner and more organized code.
+  
+  - **routes/**: 
+    - Contains routing definition.
+  
+  - **store/**: 
+    - Contains Redux configuration files, including store setup, reducers, and any middleware.
+  
+  - **utilities/**: 
+    - Contains constants and utilities for re-useable purposes.
+  
+  - **App.js**: 
+    - The main component that renders the application. It sets up the routes and any global providers (like Redux).
+  
+  - **index.js**: 
+    - The entry point of the application. It renders the `App` component into the DOM.
+  
+  - **styles/**: 
+    - Contains Sass stylesheets for the application, allowing you to write CSS using Sass features like nesting and variables.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Future Improvements
+Implement advanced data fetching with Axios.
+Add more routes and components for a richer user experience.
+Enhance testing coverage for all components.
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
