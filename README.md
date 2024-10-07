@@ -116,7 +116,7 @@ energy_usage/
   - **store/**: 
     - Contains Redux configuration files, including store setup, reducers, and any middleware.
   
-  - **utilities/**: 
+  - **utils/**: 
     - Contains constants and utilities for re-useable purposes.
   
   - **App.js**: 
@@ -124,10 +124,6 @@ energy_usage/
   
   - **index.js**: 
     - The entry point of the application. It renders the `App` component into the DOM.
-  
-  - **styles/**: 
-    - Contains Sass stylesheets for the application, allowing you to write CSS using Sass features like nesting and variables.
-
 
 
 ## Future Improvements
