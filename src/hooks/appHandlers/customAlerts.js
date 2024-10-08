@@ -5,15 +5,8 @@ import { HELPER, CONSTANTS } from "../../utils";
 
 
 const useCustomAlerts = () => {
-  const { message, type, group, autoDismiss } = useSelector(state => state.alert);
+  const { message, type, group } = useSelector(state => state.alert);
   
-
-  //clear alert msg in mobile after 3 sec
-  const clearMessage=()=>{
-    setTimeout(() => {
-      // dispatch(alertActions.clear());
-    }, 3000)
-  }
 
   if(!HELPER.isEmpty(message) && !HELPER.isEmpty(type)){
       const clearAlert = () => {

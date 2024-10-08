@@ -6,7 +6,7 @@ import {  toast } from 'react-toast'
 
 
 import { HELPER, CONSTANTS } from "../../utils";
-import { useCustomAlerts, useToaster } from "../../hooks";
+import { useCustomAlerts } from "../../hooks";
 import { scroller } from "react-scroll";
 
 let timeoutTime

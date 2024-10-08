@@ -1,5 +1,4 @@
-import { CONSTANTS, LOCAL_STORAGE_SERVICE } from "../../utils";
-import { store } from "../../store";
+import { LOCAL_STORAGE_SERVICE } from "../../utils";
 
 function capitalizeFirstLetter(string) {
   var val = "";
